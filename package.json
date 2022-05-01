@@ -1,4 +1,4 @@
-  {
+{
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -12,13 +12,13 @@
     "devDependencies": {
         "@ckeditor/ckeditor5-build-classic": "^33.0.0",
         "@tailwindcss/forms": "^0.5.0",
-        "autoprefixer": "^10.4.4",
+        "autoprefixer": "^10.4.5",
         "axios": "^0.21",
         "cross-env": "^7.0.3",
         "laravel-mix": "^6.0.11",
         "lodash": "^4.17.19",
-        "postcss": "^8.4.12",
-        "tailwindcss": "^3.0.23",
+        "postcss": "^8.4.13",
+        "tailwindcss": "^3.0.24",
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
