@@ -8,5 +8,5 @@ theme: {
     extend: {},
 },
 variants: {},
-plugins: [],
+plugins: [require("@tailwindcss/forms")],
 };

@@ -14,12 +14,18 @@
                     @csrf
 
                     <div class="flex flex-wrap">
+                        <a href="{{ route('login.google') }}" class="block w-full bg-red-500 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-google mr-3"></i>Login with Google</a>
+                        <a href="{{ route('login.linkedin') }}" class="block w-full bg-sky-600 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-linkedin mr-3"></i>Login with LinkedIn</a>
+                        <a href="{{ route('login.twitter') }}" class="block w-full bg-sky-400 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-twitter mr-3"></i>Login with Twitter</a>
+                        <a href="{{ route('login.github') }}" class="block w-full bg-zinc-900 text-white text-center rounded-lg p-3 my-2 font-bold"><i class="bi bi-github mr-3"></i>Login with GitHub</a>
+                        <p class="text-lg block w-full text-center my-3">or</p>
+
                         <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('E-Mail Address') }}:
+                            {{ __('Email Address') }}:
                         </label>
 
                         <input id="email" type="email"
-                            class="form-input w-full @error('email') border-red-500 @enderror" name="email"
+                            class="w-full rounded-lg border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 @error('email') border-red-500 @enderror" name="email"
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
@@ -35,7 +41,7 @@
                         </label>
 
                         <input id="password" type="password"
-                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
+                            class="w-full rounded-lg border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 @error('password') border-red-500 @enderror" name="password"
                             required>
 
                         @error('password')
@@ -61,8 +67,13 @@
                     </div>
 
                     <div class="flex flex-wrap">
+                        {!! NoCaptcha::renderJs() !!}
+                        {!! NoCaptcha::display() !!}
+                        </div>
+
+                    <div class="flex flex-wrap">
                         <button type="submit"
-                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
+                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-sky-500 hover:bg-sky-600 sm:py-4">
                             {{ __('Login') }}
                         </button>
 
